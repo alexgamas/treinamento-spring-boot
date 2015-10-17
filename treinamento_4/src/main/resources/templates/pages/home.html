@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" 
+	layout:decorator="layout">
+	
+<body>
+
+	<h2 layout:fragment="header">
+		<h2>Home page</h2>
+	</h2>
+	
+	<div layout:fragment="content">
+		<p>
+			<img src="/images/springboot.png" />
+		</p>
+		
+		<h4>Esta eh sua home page. </h4>
+	
+		<p>
+			Este exemplo foi baseado no tutorial do Spring Boot:
+			<a href="http://spring.io/guides/gs/spring-boot" target="_blank">Guia Spring Boot </a>
+		</p>
+		
+		<p>
+		Acesse o site principal do <a href="http://projects.spring.io/spring-boot/" target="_blank">Spring Boot</a> para mais mnuais e exemplos.
+		</p>
+		
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="layout">
+
+<body onload="document.form.inputEmail.focus();">
+
+	<h2 layout:fragment="header">Login</h2>
+
+	<div layout:fragment="content" >
+
+		<p th:if="${param.logout}" class="alert">You have been logged out</p>
+		<p th:if="${param.error}" class="alert alert-error">There was an error, please try again</p>
+		
+		<form name="form" th:action="@{/login}" action="/login" method="POST">
+			
+			<label for="inputEmail">Email</label>			
+			<input type="text" id="inputEmail" placeholder="Email address" name="username" value=""/> <br/>
+			
+			<label for="inputPassword">Password</label> 
+			<input type="password" id="inputPassword" name="password" placeholder="Password" /><br/>
+			
+			<input type="submit" id="login" value="Login" />
+			
+		</form>
+
+	</div>
+</body>
+</html>
