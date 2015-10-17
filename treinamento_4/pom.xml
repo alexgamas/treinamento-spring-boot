@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<name>Spring Boot Web Secure Sample</name>
-	<description>Treinamento 1 </description>
+	<description>Treinamento 4</description>
 	<url>http://gamas.com.br/</url>
 
 	<groupId>br.com.gamas.treinamento</groupId>
-	<artifactId>app-treinamento</artifactId>
+	<artifactId>app-treinamento-4</artifactId>
 	<version>0.0.5</version>
 	<!-- <packaging>jar</packaging> -->
 

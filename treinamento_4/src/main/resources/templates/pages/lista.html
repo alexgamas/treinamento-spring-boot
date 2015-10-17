@@ -5,10 +5,10 @@
 
 	<body>
 	
-		<h2 layout:fragment="header">Lista de inscrições</h2>
+		<h2 layout:fragment="header" class="page-header">Lista de inscrições</h2>
 	
 		<div layout:fragment="content">
-			<table border="1">
+			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<td>Id</td>
@@ -38,8 +38,13 @@
 						<td th:text="${inscricao.situacao.descricao}"></td>
 					
 						<td>
-							<a th:href="@{'/avaliacao/aprovar/' + ${inscricao.id}}">Aprovar</a>
-							<a th:href="@{'/avaliacao/reprovar/' + ${inscricao.id}}">Recusar</a> 
+							<a th:href="@{'/avaliacao/aprovar/' + ${inscricao.id}}">
+								<span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+							</a>
+							
+							<a th:href="@{'/avaliacao/reprovar/' + ${inscricao.id}}">
+								<span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+							</a> 
 						</td>
 					</tr>
 				</tbody>
