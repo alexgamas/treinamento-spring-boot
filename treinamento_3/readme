@@ -1,0 +1,9 @@
+Exemplo baseado no tutorial da spring:
+https://spring.io/guides/gs/spring-boot/
+https://spring.io/guides/gs/securing-web/
+http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-security.html
+http://docs.spring.io/spring-boot/docs/1.2.7.RELEASE/reference/htmlsingle/
+
+
+DaoAuthenticationConfigurer:
+http://kielczewski.eu/2014/12/spring-boot-security-application/
