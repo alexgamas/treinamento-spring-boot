@@ -16,7 +16,7 @@ public class InscricaoService {
 	private InscricaoRepository inscricaoRepository; 
 
 	public Inscricao buscarInscricaoPorId(Long id) {
-		return inscricaoRepository.getOne(id);
+		return inscricaoRepository.findOne(id);
 	}
 
 	public void save(Inscricao inscricao) {

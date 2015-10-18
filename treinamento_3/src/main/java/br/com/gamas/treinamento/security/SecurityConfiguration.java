@@ -23,7 +23,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		//super.configure(http);
 		// @formatter:off
-		HttpSecurity httpSecurity = http.authorizeRequests().antMatchers("/images/**", "/", "/home", "/formulario/inscricao").permitAll().anyRequest().fullyAuthenticated().and();
+		//"/formulario/inscricao", "/formulario/visualizar/*", "/formulario/salvar"
+		
+		HttpSecurity httpSecurity = http.authorizeRequests().antMatchers("/images/**", "/", "/home", "/formulario/**").permitAll().anyRequest().fullyAuthenticated().and();
 		httpSecurity = httpSecurity.formLogin().loginPage("/login").failureUrl("/login?error").permitAll().and();
 		httpSecurity = httpSecurity.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout")).logoutSuccessUrl("/").and();
 		//httpSecurity = httpSecurity.exceptionHandling().accessDeniedPage("/access?error").and();

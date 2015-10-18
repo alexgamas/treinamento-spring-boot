@@ -5,9 +5,7 @@
 
 	<body>
 	
-		<h2 layout:fragment="header">
-			Preencha o formulário
-		</h2>
+		<h2 layout:fragment="header">Preencha o formulário</h2>
 	
 		<div layout:fragment="content">
 			<form name="form" th:action="@{/formulario/salvar}" th:object="${inscricao}" method="POST">
