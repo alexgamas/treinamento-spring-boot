@@ -21,3 +21,8 @@ body {
 	margin: 0 auto;
 	max-width: 320px;
 }
+
+.logo-frontpage {
+	padding-bottom: 32px;
+	padding-top: 16px;
+}
