@@ -15,6 +15,7 @@
 						<td>Nome</td>
 						<td>Email</td>
 						<td>Idade</td>
+						<td>Data Inscrição</td>
 						<td>Situação</td>
 						<td>Ação</td>
 					</tr>
@@ -22,7 +23,7 @@
 				<tbody>
 					
 					<tr th:if="${inscricoes.empty}">
-						<td colspan="6">
+						<td colspan="7">
 							<span>Sem inscrições para exibir</span>
 						</td>
 					</tr>
@@ -35,6 +36,7 @@
 						<td th:text="${inscricao.nome}"></td>
 						<td th:text="${inscricao.email}"></td>
 						<td th:text="${inscricao.idade}"></td>
+						<td th:text="${#calendars.format(inscricao.dataInscricao, 'dd/MM/yyyy HH:mm:ss')}"></td>
 						<td th:text="${inscricao.situacao.descricao}"></td>
 					
 						<td>

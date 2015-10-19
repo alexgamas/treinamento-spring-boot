@@ -1,17 +1,31 @@
 package br.com.gamas.treinamento.model;
 
+import java.util.Date;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Inscricao {
 
 	private Long id;
 
+	@NotNull
+	@Size(max=30)
 	private String nome;
 
+	@NotNull
+	@Size(max=30)
 	private String email;
 
+	@Min(18)
+	@NotNull
 	private Integer idade;
 	
+	private Date dataInscricao;
+
 	private Situacao situacao;
-	
+
 	public Inscricao() {
 		setSituacao(Situacao.PENDENTE);
 	}
@@ -54,5 +68,13 @@ public class Inscricao {
 
 	public void setSituacao(Situacao situacao) {
 		this.situacao = situacao;
+	}
+
+	public Date getDataInscricao() {
+		return dataInscricao;
+	}
+
+	public void setDataInscricao(Date dataInscricao) {
+		this.dataInscricao = dataInscricao;
 	}
 }

@@ -6,8 +6,13 @@
 	<body>
 	
 		<h2 layout:fragment="header">Preencha o formulário</h2>
-	
+		
+		
 		<div layout:fragment="content">
+			<ul style="color: red;">
+				<li th:each="erro : ${formErrors}" th:text="${erro}"></li>
+			</ul>
+			
 			<form name="form" th:action="@{/formulario/salvar}" th:object="${inscricao}" method="POST">
 			
 				<label for="nome">Nome:</label> 

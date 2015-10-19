@@ -31,6 +31,10 @@
 					<span id="idade" th:text="${inscricao.idade}"></span>
 					<br />
 					
+					<label for="dataInscricao">Data Inscrição: </label>
+					<span id="dataInscricao" th:text="${#calendars.format(inscricao.dataInscricao, 'dd/MM/yyyy HH:mm:ss')}"></span>
+					<br />
+					
 					<label for="situacao">Situação: </label>
 					<span id="situacao" th:text="${inscricao.situacao.descricao}"></span>				
 				</div>
