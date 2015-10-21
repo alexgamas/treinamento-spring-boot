@@ -75,7 +75,8 @@ public class Application {
 	}
 	
 	//curl -i -H "Content-Type: application/json" -X POST -d '{"id":1, "descricao":"pessoa"}' http://localhost:8081/rest-request-complexo
-	
+	//ab -n 10000 -c 1 -T "application/json" -p data.txt http://localhost:8081/rest-request-complexo
+	//data.txt: {"id":1, "descricao":"pessoa"}
 	@RequestMapping(value = "/rest-request-complexo", consumes = { "application/json;charset=UTF-8" }, produces = { "application/json;charset=UTF-8" }, method = { RequestMethod.POST })
 	public @ResponseBody Retorno searchDocumento(@RequestBody(required = false) Request request) {
 		Date data = new Date();
