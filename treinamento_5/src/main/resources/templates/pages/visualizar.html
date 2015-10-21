@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorator="layout">
+
+<body>
+
+	<h2 layout:fragment="header">Visualisar registro</h2>
+
+	<div layout:fragment="content">
+
+				<div th:if="${inscricao == null}">
+					<span>Registro <b th:text="${id}"></b> não encontrado.</span>
+					
+				</div>
+				
+				<div th:if="${inscricao != null}">
+					<label for="id">Id: </label>
+					<span id="id" th:text="${inscricao.id}"></span>
+					<br />
+					
+					<label for="nome">Nome: </label>
+					<span id="nome" th:text="${inscricao.nome}"></span>
+					<br />
+		
+					<label for="email">Email: </label>
+					<span id="email" th:text="${inscricao.email}"></span>
+					<br />
+					
+					<label for="idade">Idade: </label>
+					<span id="idade" th:text="${inscricao.idade}"></span>
+					<br />
+					
+					<label for="situacao">Situação: </label>
+					<span id="situacao" th:text="${inscricao.situacao.descricao}"></span>				
+				</div>
+		
+
+			
+			<!-- <dd id="nome" th:text="${#calendars.format(message.created)}"></dd> -->
+		
+
+	</div>
+	
+</body>
+</html>

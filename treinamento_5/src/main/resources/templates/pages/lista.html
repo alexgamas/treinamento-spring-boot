@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorator="layout">
+
+	<body>
+	
+		<h2 layout:fragment="header">Lista de inscrições</h2>
+	
+		<div layout:fragment="content">
+			<table border="1">
+				<thead>
+					<tr>
+						<td>Id</td>
+						<td>Nome</td>
+						<td>Email</td>
+						<td>Idade</td>
+						<td>Situação</td>
+						<td>Ação</td>
+					</tr>
+				</thead>
+				<tbody>
+					
+					<tr th:if="${inscricoes.empty}">
+						<td colspan="6">
+							<span>Sem inscrições para exibir</span>
+						</td>
+					</tr>
+					
+					<tr th:each="inscricao : ${inscricoes}">
+						<td>
+							<a th:href="@{'/formulario/visualizar/' + ${inscricao.id}}" th:text="${inscricao.id}"></a>
+						</td>
+					
+						<td th:text="${inscricao.nome}"></td>
+						<td th:text="${inscricao.email}"></td>
+						<td th:text="${inscricao.idade}"></td>
+						<td th:text="${inscricao.situacao.descricao}"></td>
+					
+						<td>
+							<a th:href="@{'/avaliacao/aprovar/' + ${inscricao.id}}">Aprovar</a>
+							<a th:href="@{'/avaliacao/reprovar/' + ${inscricao.id}}">Recusar</a> 
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- <dd id="nome" th:text="${#calendars.format(message.created)}"></dd> -->
+		</div>
+		
+	</body>
+</html>

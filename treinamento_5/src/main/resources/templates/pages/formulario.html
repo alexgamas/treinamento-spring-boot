@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorator="layout">
+
+	<body>
+	
+		<h2 layout:fragment="header">
+			Preencha o formulário
+		</h2>
+	
+		<div layout:fragment="content">
+			<form name="form" th:action="@{/formulario/salvar}" th:object="${inscricao}" method="POST">
+
+<!-- 				<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/> -->
+
+				<label for="nome">Nome:</label> 
+				<input type="text" id="nome" name="nome" th:field="*{nome}" size="80" required="required" /> <br /> 
+				
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" th:field="*{email}" size="80" required="required" /> <br /> 
+				
+				<label for="idade">Idade:</label>
+				<input type="number" id="idade" name="idade" th:field="*{idade}" required="required" /> <br />
+				
+				<input type="submit" value="Salvar"/>
+			</form>
+		</div>	
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+
+<title>Treinamento - 3</title>
+
+</head>
+
+<body role="document">
+	<a th:href="@{/home}">Home</a>
+	<a th:href="@{/formulario/inscricao}">Inscrição</a>
+	<a th:if="${isAuthenticated}" th:href="@{/avaliacao/lista}" >Avaliação</a>
+	
+	<a th:if="${not isAuthenticated}" th:href="@{/login}">Login</a>
+	<a th:if="${isAuthenticated}" th:href="@{/logout}">
+		Logout (<span th:text="${currentUser.username}"></span>)
+	</a>
+	
+	<hr/>
+	<div class="container" role="main">
+		<div layout:fragment="header" />
+		<hr/>
+		<div layout:fragment="content" />
+	</div>
+
+
+</body>
+</html>
