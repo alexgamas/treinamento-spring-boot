@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	
+	<title>Treinamento - 4</title>
+	
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}" />
+	<link rel="stylesheet" th:href="@{/css/bootstrap-theme.css}" />
+	<link rel="stylesheet" th:href="@{/css/main.css}" />
+
+	<!-- JavaScript -->
+	<script th:src="@{/js/jquery.js}" />
+	<script th:src="@{/js/bootstrap.js}" />
+	<script th:src="@{/js/main.js}" />
+	
+</head>
+
+<body role="document">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+		
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" th:href="@{/home}">Treinamento Spring Boot</a>
+			</div>
+			
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+				
+					<li> <a th:href="@{/home}">Home</a></li>
+					
+					<li><a th:href="@{/formulario/inscricao}">Inscrição</a></li>
+					<li th:if="${isAuthenticated}"><a th:href="@{/avaliacao/lista}" >Avaliação</a></li>
+					
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					
+					<li th:if="${not isAuthenticated}"> <a th:href="@{/login}">Login</a></li>
+					
+					<li th:if="${isAuthenticated}"> 
+						<a th:href="@{/logout}">
+							Logout (<span th:text="${currentUser.username}"></span>)
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+	<div class="container" role="main">
+		<div layout:fragment="header" />
+		<div layout:fragment="content" />
+	</div>
+
+
+</body>
+</html>

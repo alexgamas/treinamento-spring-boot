@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout" layout:decorator="layout">
+<body>
+	<h2 layout:fragment="header" class="page-header">Erro inesperado</h2>
+
+	<div layout:fragment="content">
+
+		<div class="alert alert-danger" role="alert">
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			<strong>Erro: </strong><span>Ocorreu um erro inesperado</span>
+			
+			<h1 th:text="${title}"></h1>
+			
+			<div>Data: <span th:text="${#dates.format(timestamp)}"></span></div>
+			<div>Erro: <span th:text="${error}"></span></div> 
+			<div>Status: <span th:text="${status}"></span></div>
+			<div>Mensagem: <span th:text="${message}"></span></div>
+	
+		</div>
+	</div>
+
+</body>
+</html>
+
+
+
+
+
+
+

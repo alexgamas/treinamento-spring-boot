@@ -4,13 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<name>Spring Boot Web Secure Sample</name>
-	<description>Treinamento 5 </description>
+	<description>Treinamento 6</description>
 	<url>http://gamas.com.br/</url>
 
 	<groupId>br.com.gamas.treinamento</groupId>
-	<artifactId>app-treinamento-5</artifactId>
-	<version>0.0.6</version>
-	<!-- <packaging>jar</packaging> -->
+	<artifactId>app-treinamento-6</artifactId>
+	<version>0.0.7</version>
+	<packaging>war</packaging>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -49,11 +49,12 @@
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
-        </dependency>
-		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
