@@ -1,1 +1,29 @@
-<p>This is the avaliacao view.</p>
+
+<header>
+	<h3>Lista de inscrições</h3>
+</header>
+
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Email</th>
+			<th>Idade</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="inscricao in inscricoes">
+			<td>{{inscricao.nome}}</td>
+			<td>{{inscricao.email}}</td>
+			<td>{{inscricao.idade}}</td>
+
+			<td>
+				<button ng-click="">Editar
+				</button>
+			</td>
+
+		</tr>
+
+	</tbody>
+</table>
