@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Treinamento Spring Boot - Angular Time</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Treinamento Spring Boot">
+		<meta name="author" content="Alex Gamas">
+
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<!-- build:css(.) styles/vendor.css -->
+		<!-- bower:css -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+		<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+		<!-- endbower -->
+		<!-- endbuild -->
+		<!-- build:css(.tmp) styles/main.css -->
+		<link rel="stylesheet" href="styles/main.css">
+		<!-- endbuild -->
+
+	</head>
+
+	<body ng-app="treinamentoApp">
+		<div class="pos-f-t">
+			<div class="collapse" id="navbar-header">
+				<div class="container-fluid bg-inverse">
+					<div class="about">
+						<h4>Sobre</h4>
+						<p class="text-muted">
+							Esta aplicação é um exemplo, feito apenas para demonstrar as capacidades de
+							integração do Spring Boot com o AngularJs.
+						</p>
+					</div>
+					<div class="social">
+						<h4>Contatos</h4>
+						<ul class="list-unstyled">
+							<li>
+								<i class="fa  fa-twitter" aria-hidden="true"></i>
+								<a href="https://twitter.com/alexgamas" target="_blank"> /alexgamas</a>
+							</li>
+							<li>
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+								<a href="https://facebook.com/gamas.alex" target="_blank"> /gamas.alex</a>
+							</li>
+							<li>
+								<i class="fa fa-github" aria-hidden="true"></i>
+								<a href="https://github.com/alexgamas/treinamento-spring-boot" target="_blank"> /alexgamas</a>
+							</li>
+							<li>
+								<i class="fa  fa-envelope" aria-hidden="true"></i>
+								<a href="mailto:alexgamas@gmail.com?Subject=D&uacute;vidas"> alexgamas@gmail.com</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<nav class="navbar navbar-light bg-faded navbar-static-top navbar-shadow">
+				<div class="container-fluid">
+
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header">
+						&#9776;
+					</button>
+
+					<a ng-href="#/" class="navbar-brand">Treinamento</a>
+
+					<ul class="nav navbar-nav">
+
+						<li class="nav-item">
+							<a class="nav-link" ng-href="#/">Home</a>
+						</li>
+
+						<li class="nav-item active">
+							<a class="nav-link" ng-href="#/inscricao/new">Inscrição</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" ng-href="#/avaliacao">Avaliação</a>
+						</li>
+
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div class="container">
+			<div ng-view></div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<span class="text-muted">
+					<a href="https://creativecommons.org/" target="_blank">
+						<i class="fa fa-creative-commons" aria-hidden="true"></i>
+						<span>Creative Commons<span>
+					</a>
+
+					<span style="padding-left: 20px;">2016 - No rights reserved<span>
+				</span>
+			</div>
+		</footer>
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+		<script>
+			!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+			(A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+			r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+			}(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-XXXXX-X');
+			ga('send', 'pageview');
+		</script>
+
+		<!-- build:js(.) scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/tether/dist/js/tether.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="bower_components/angular-messages/angular-messages.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="bower_components/angular-touch/angular-touch.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
+
+		<!-- build:js({.tmp,app}) scripts/scripts.js -->
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/main.js"></script>
+		<script src="scripts/controllers/about.js"></script>
+		<script src="scripts/controllers/inscricao.js"></script>
+		<script src="scripts/controllers/avaliacao.js"></script>
+		<!-- endbuild -->
+
+
+	</body>
+</html>

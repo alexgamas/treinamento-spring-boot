@@ -1,0 +1,111 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	padding-top: 6rem;
+	margin-bottom: 60px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 60px;
+	line-height: 60px; /* Vertically center the text there */
+	background-color: #f7f7f9;
+}
+
+body > .container {
+	padding: 0px 15px 15px 15px;
+}
+
+.footer > .container {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.footer a {
+	text-decoration: none;
+}
+
+header {
+	padding-bottom: 25px;
+
+}
+
+
+header h3 {
+	color: #2b2b2b;
+}
+
+.about {
+	float: left;
+	max-width: 30rem;
+	margin-right: 3rem;
+	height: 146px;
+}
+
+.social a {
+	font-weight: 500;
+	color: #eceeef;
+}
+
+.social i {
+	width: 18px;
+}
+
+.social a:hover {
+	color: #fff;
+}
+
+.logo-frontpage {
+	display: block;
+}
+
+.logo-frontpage img {
+	height: 48px;
+	padding-left: 10px;
+	float: right;
+	display: block;
+}
+
+.jumbotron ul {
+    list-style-type: none;
+}
+
+nav .container-fluid {
+	display: inline-flex;
+}
+
+.card-top-250 {
+    overflow: hidden;
+	border-radius: 0px;
+    height: 250px;
+}
+
+.card-material {
+    background: #f7f7f9;
+    border: none;
+    border-radius: 0px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+}
+
+.error-number {
+    position: absolute;
+	right: 0px;
+    font-size: 109px;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, .5);
+}
+
+.navbar-shadow {
+	box-shadow: 0px 1px 5px rgba(10, 10, 10, .5);
+    border-radius: 0px;
+}
+
+#navbar-header .container-fluid {
+    padding-top: 10px;
+}

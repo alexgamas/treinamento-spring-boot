@@ -1,0 +1,25 @@
+<form name="inscricaoForm">
+
+	<div class="form-group ng-class:inscricaoForm.nome.$touched ? inscricaoForm.nome.$invalid ? 'has-danger' : 'has-success': ''">
+		<label for="nome">Nome:</label>
+		<input type="text" id="nome" name="nome" ng-model="nome" class="form-control form-control-success form-control-danger" required="required" />
+		<small id="nomeHelp" class="form-text text-muted">Coloque o seu nome completo sem abreviações.</small>
+		<small class="text-danger" ng-show="inscricaoForm.nome.$touched && inscricaoForm.nome.$invalid">Campo <em>Nome</em> inválido.</small>
+	</div>
+
+	<div class="form-group ng-class:inscricaoForm.email.$touched ? inscricaoForm.email.$invalid ? 'has-danger' : 'has-success': ''">
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" ng-model="email" class="form-control form-control-success form-control-danger" required="required" />
+		<small id="emailHelp" class="form-text text-muted">Use um email válido. Esta é a nossa única forma de contato.</small>
+		<small class="text-danger" ng-show="inscricaoForm.email.$touched && inscricaoForm.email.$invalid">Campo <em>Email</em> inválido.</small>
+	</div>
+
+	<div class="form-group ng-class:inscricaoForm.idade.$touched ? inscricaoForm.idade.$invalid ? 'has-danger' : 'has-success': ''">
+		<label for="idade">Idade:</label>
+		<input type="number" id="idade" name="idade" ng-model="idade" class="form-control form-control-success form-control-danger" required="required" />
+		<small class="text-danger" ng-show="inscricaoForm.idade.$touched && inscricaoForm.idade.$invalid">Campo <em>Idade</em> inválido.</small>
+	</div>
+
+	<input type="submit" class="btn btn-primary" value="Salvar"/>
+
+</form>
