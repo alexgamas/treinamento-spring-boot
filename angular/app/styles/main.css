@@ -109,3 +109,20 @@ nav .container-fluid {
 #navbar-header .container-fluid {
     padding-top: 10px;
 }
+
+
+.table-grid {
+
+}
+
+.table-grid table {
+	margin-bottom: 0px;
+}
+
+.table-grid .table-footer select {
+	display: inline-block;
+	width: 80px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	height: 42px;
+}

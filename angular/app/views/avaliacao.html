@@ -3,27 +3,77 @@
 	<h3>Lista de inscrições</h3>
 </header>
 
-<table class="table table-bordered table-striped">
-	<thead>
-		<tr>
-			<th>Nome</th>
-			<th>Email</th>
-			<th>Idade</th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr ng-repeat="inscricao in inscricoes">
-			<td>{{inscricao.nome}}</td>
-			<td>{{inscricao.email}}</td>
-			<td>{{inscricao.idade}}</td>
+<div class="table-grid">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Email</th>
+				<th>Idade</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="inscricao in inscricoes">
+				<td>{{inscricao.nome}}</td>
+				<td>{{inscricao.email}}</td>
+				<td>{{inscricao.idade}}</td>
 
-			<td>
-				<button ng-click="">Editar
-				</button>
-			</td>
+				<td>
+					<button ng-click="edit(inscricao.id);">Editar</button>
+				</td>
 
-		</tr>
+			</tr>
+	</table>
 
-	</tbody>
-</table>
+	<div class="table-footer">
+		<!--
+		<div class="btn-group">
+			<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Action
+			</button>
+
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Action</a>
+				<a class="dropdown-item" href="#">Another action</a>
+				<a class="dropdown-item" href="#">Something else here</a>
+				<div class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Separated link</a>
+			</div>
+		</div>
+		-->
+
+
+
+		<nav aria-label="Paginador">
+
+			<select class="form-control" id="exampleSelect1">
+				<option>5</option>
+				<option>10</option>
+				<option>15</option>
+				<option>20</option>
+				<option>25</option>
+			</select>
+
+			<ul class="pagination pull-xs-right">
+				<li class="page-item">
+					<a class="page-link" href="#" aria-label="Previous">
+						<span aria-hidden="true">&laquo;</span>
+						<span class="sr-only">Previous</span>
+					</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">4</a></li>
+				<li class="page-item"><a class="page-link" href="#">5</a></li>
+				<li class="page-item">
+					<a class="page-link" href="#" aria-label="Next">
+						<span aria-hidden="true">&raquo;</span>
+						<span class="sr-only">Next</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>

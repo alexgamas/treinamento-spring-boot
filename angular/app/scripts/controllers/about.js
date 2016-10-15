@@ -7,11 +7,6 @@
  * # AboutCtrl
  * Controller of the treinamentoApp
  */
-angular.module('treinamentoApp')
-  .controller('AboutCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+angular.module('treinamentoApp').controller('AboutCtrl', function () {
+
+});

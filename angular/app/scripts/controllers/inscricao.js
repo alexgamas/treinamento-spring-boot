@@ -8,8 +8,8 @@
  * Controller of the treinamentoApp
  */
 
-angular.module('treinamentoApp').controller('InscricaoCtrl', function ($scope, $location, $routeParams) {
+angular.module('treinamentoApp').controller('InscricaoCtrl', function ($scope, $location, $routeParams, $http) {
 	$scope.save = function() {
-		alert($scope.cadastro);
+		$http.post('http://localhost:3000/inscricoes', $scope.inscricao);
 	};
 });

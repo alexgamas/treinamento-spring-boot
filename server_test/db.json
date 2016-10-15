@@ -1,0 +1,37 @@
+{
+  "inscricoes": [
+    {
+      "id": 1,
+      "nome": "Alex Gamas",
+      "email": "alexgamas@gmail.com",
+      "idade": 34,
+      "situacao": 0
+    },
+    {
+      "nome": "Lian Castro",
+      "email": "liancastro.lc@gmail.com",
+      "idade": 24,
+      "situacao": 0,
+      "id": 2
+    },
+    {
+      "nome": "Michel Souza",
+      "email": "mic.souza@gmail.com",
+      "idade": 27,
+      "situacao": 1,
+      "id": 3
+    },
+    {
+      "nome": "alex gamas",
+      "email": "222@u.com",
+      "idade": 23,
+      "id": 7
+    },
+    {
+      "nome": "Rrrr",
+      "email": "alex@gamas.com.b",
+      "idade": 234,
+      "id": 8
+    }
+  ]
+}
